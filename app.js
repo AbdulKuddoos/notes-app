@@ -36,6 +36,14 @@ yargs.command({
   },
 });
 
+yargs.command({
+  command: "list",
+  describe: "list out the notes stored in the app",
+  handler() {
+    notesUtilities.listNotes();
+  },
+});
+
 yargs.parse();
 
 // console.log(yargs.argv);
